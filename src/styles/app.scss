@@ -149,7 +149,7 @@ main{
 }
 
 
-.discover__container{
+.discover__container, .filter__container, .all__container, .share__container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,4 +158,24 @@ main{
 .image__mockup{
     margin-top: 36px;
     width: 75%;
+}
+
+.footer{
+    &__container{
+        background-color: #274154;
+        color: #EEF0F2;
+        display:flex ;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__list{
+        list-style: none;
+        margin: 36px auto;
+        text-align: center;
+
+        &__el{
+            padding: 4.5px;
+        }
+    }
 }
