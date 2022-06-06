@@ -125,6 +125,8 @@ main{
     }
 }
 
+
+
 .download{
     width: 75%;
     margin:72px auto;
@@ -136,6 +138,12 @@ main{
     &__el{
         width: 70%;
         margin: 18px;
+        transition: 0.5s;
+    }
+
+    &__el:hover{
+        transform: scale(0.9);
+        transition: 0.5s;
     }
 }
 
@@ -152,7 +160,8 @@ main{
 
 .image__mockup{
     margin-top: 36px;
-    width: 75%;
+    width: 65%;
+    filter: drop-shadow(0px 4px 4px #131316);
 }
 
 .footer{
@@ -311,6 +320,102 @@ main{
             }
         }
         
+    }
+}
+
+@media(min-width:1024px){
+    main{
+        margin: 100px 60px;
+    }
+
+    .intro__container{
+        flex-direction: row;
+    }
+
+    .intro__image{
+        height: 100vh;
+    }
+
+    .logo{
+        
+        &__title{
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 336px;
+        }
+    
+        &__slogan{
+            font-weight: bold;
+            font-size: 41px;
+            max-width: 60%;
+            text-align: center;
+            margin: 9px auto 0 ;
+        }
+    }
+
+    .title{
+    
+        &__second{
+            margin: 0 0 20px;
+        }
+    
+        &__third{
+            width: 80%;
+        }
+    }
+
+    .download{
+        width: 60%;
+        margin:100px auto;
+        &__el{
+            max-width: 50%;
+            margin: 20px;
+            transition: 0.5s;
+        }
+    
+        &__el:hover{
+            transform: scale(0.9);
+            transition: 0.5s;
+        }
+    }
+    .download:first-of-type{
+        margin: 100px auto 0;
+    }
+    
+    .discover__container, .filter__container, .all__container, .share__container{
+        display: flex;
+        justify-content: center;
+        width: 85%;
+    }
+
+    .download{
+        &__container{
+            width: 85%;
+        }
+        &__text{
+            width: 65%;
+        }
+    }
+
+    .discover__text, .filter__text, .all__text, .share__text {
+        width: 40%;
+        margin-right: 40px;
+    }
+
+    .image__mockup{
+        width: 25%;
+    }
+
+    .footer{
+
+        &__list{
+            list-style: none;
+            margin: 40px auto;
+            text-align: center;
+    
+            &__el{
+                padding: 10px;
+            }
+        }
     }
 
 
