@@ -28,7 +28,7 @@ main{
 
 .intro__container, .intro__filtre{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 .intro__image{
@@ -41,7 +41,7 @@ main{
         transform: rotate(180deg);
     }
     &--man{
-        background-image: url(../assets/images/MecUne.png);
+        background-image: url(../assets/images/MecUn.png);
         background-position: center;
     }
 }
@@ -200,14 +200,25 @@ main{
     bottom: 0;
     left: 0;
     transform-origin: left;
-    transform: scaleX(1);
+    transform: translateY(6px) scaleX(1);
     transition: transform .3s ease-in-out;
   }
   
 .link:hover::before {
   transform-origin: right;
-  transform: scaleX(0);
+  transform: translateY(6px) scaleX(0);
 }
+
+@media(orientation : landscape){
+    .intro__container{
+        flex-direction: row;
+    }
+
+    .intro__image{
+        height: 100vh;
+    }
+}
+
 
 @media(min-width:736px){
     body{
@@ -301,6 +312,15 @@ main{
         margin:0 5%;
         width: 45%;
     }
+
+    .link::before {
+        transform: translateY(8px) scaleX(1);
+      }
+      
+    .link:hover::before {
+      transform: translateY(8px) scaleX(0);
+    }
+
 
     .footer{
         &__container{
@@ -405,6 +425,15 @@ main{
         width: 25%;
     }
 
+    
+    .link::before {
+        transform: translateY(10px) scaleX(1);
+      }
+      
+    .link:hover::before {
+      transform: translateY(10px) scaleX(0);
+    }
+
     .footer{
 
         &__list{
@@ -419,4 +448,37 @@ main{
     }
 
 
+}
+
+
+@media(min-width:700px)and(max-width:920px)and(orientation:landscape){
+    .intro__container{
+        align-items: flex-start;
+    }
+    .scroll{
+        margin-bottom: 8px;
+    }
+}
+
+@media(min-width:700px)and(max-width:920px)and(max-height:390px)and(orientation:landscape){
+    .intro__container{
+        align-items: center;
+    } 
+    .scroll{  
+       display: none;
+    }
+}
+
+@media(-webkit-min-device-pixel-ratio: 2){
+    .intro__image{
+        &--woman{
+            background-image: url(../assets/images/FilleUne@2x.png);
+            background-position: bottom;
+            transform: rotate(180deg);
+        }
+        &--man{
+            background-image: url(../assets/images/MecUn@2x.png);
+            background-position: center;
+        }
+    }
 }
