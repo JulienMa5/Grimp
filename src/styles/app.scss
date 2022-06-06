@@ -1,2 +1,161 @@
 @import 'utils/variables';
 @import 'components/type';
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Sulphur Point', sans-serif;
+    background-color: #EEF0F2;
+    line-height: 1.2;
+}
+
+main{
+    margin: 72px 18px;
+}
+
+.intro__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro__container, .intro__filtre{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    
+    align-items: center;
+}
+
+.intro__image{
+    z-index: -5;
+    width: 100%;
+    height: 50vh;
+    &--woman{
+        background-image: url(../assets/images/FilleUne.png);
+        background-size: cover;
+        background-position: bottom;
+        transform: rotate(180deg);
+    }
+    &--man{
+        background-image: url(../assets/images/MecUne.png);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.intro__filtre{
+    z-index: 0;
+    background: linear-gradient(0deg, rgba(19,19,22,0.75) 0%, rgba(19,19,22,0.25) 100%);
+    position:absolute;
+    top: 0;
+}
+
+.logo{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+    color:#EEF0F2;
+    
+    &__title{
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 100px;
+        line-height: 120%;
+    }
+
+    &__slogan{
+        font-weight: bold;
+        max-width: 80%;
+        text-align: center;
+        margin: 9px auto 0 ;
+    }
+}
+
+.scroll{
+    z-index: 6;
+    color: #EEF0F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 36px;
+}
+
+.scroll__mouse{
+    width: 19px;
+    height: 36px;
+    border: 2px solid #EEF0F2;
+    border-radius: 20px;
+    display: flex;
+
+    &--ball{
+        display: block;
+        width: 9px;
+        height: 9px;
+        background-color: #EEF0F2;
+        border-radius: 50%;
+        margin: auto;
+        animation: scrollable 2s linear infinite;
+    }
+}
+
+@keyframes scrollable{
+    0%{
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(-1rem);
+    }
+}
+
+
+.title{
+    font-family: 'Barlow Condensed', sans-serif;
+
+    &__second{
+        font-size: 65px;
+        margin: 90px 0 18px;
+    }
+
+    &__third{
+        font-size: 32px;
+    }
+}
+
+.download{
+    width: 75%;
+    margin:72px auto;
+    background-color: #274154;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    align-items: center;
+    &__el:first-of-type{
+        margin-bottom: 0;
+    }
+    &__el{
+        width: 70%;
+        margin: 18px;
+    }
+}
+
+
+.discover__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image__mockup{
+    margin-top: 36px;
+    width: 75%;
+}
