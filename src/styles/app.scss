@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-size: 18px;
     font-family: 'Sulphur Point', sans-serif;
@@ -15,6 +19,7 @@ body{
 
 main{
     margin: 72px 18px;
+    overflow-x: hidden;
 }
 
 .intro__container{
@@ -151,11 +156,11 @@ main{
     margin: 72px auto 0;
 }
 
-
 .discover__container, .filter__container, .all__container, .share__container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .image__mockup{
